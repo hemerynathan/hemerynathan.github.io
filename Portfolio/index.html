@@ -4,232 +4,38 @@
 		<meta charset="UTF-8">
 		<title>Portfolio HEMERY Nathan</title>
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+		<link rel="stylesheet" href="style.css">
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans:wght@300&display=swap');
-
-			*{
-				padding: 0%;
-				margin: 0%;
-			}
 			body{
-				font-family: 'Noto Sans', sans-serif;
-				background-color: rgb(66,69,73);
-				color: lightgrey;
-
+				background: url(images/image2.jpg) no-repeat center fixed; 
+				background-size: 100%;
 			}
-			nav{
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				align-items: center;
-				position: sticky;
-				top: 0;
-				background-color: rgb(30,33,36);
-				color: white;
+			main{
+				color:orange;
+				text: bold;
 			}
-			nav .profil{
-				display: flex;
-				align-items: center;
-				margin: 1%;
-				margin-left: 1%;
-			}
-			nav .profil img{
-				width: 5%;
-				height: auto;
-				border-radius: 50%;
-			}
-			nav .profil h1{
-				font-size: 200%;
-				margin-left: 1%;
-
-			}
-			nav ul{
-				display: flex;
-				list-style-type: none;
-				margin-right: 5%;
-				text-size-adjust: 200%;
-			}
-			nav ul li{
-				margin-right: 2%;
-				cursor: pointer;
-				border-bottom: 1px solid rgb(30,33,36);
-			}
-			nav ul li:hover{
-				border-bottom: 1px solid white;
-			}
-			nav ul li .dropdown {
-				position: relative;
-				display: inline-block;
-			}
-			nav ul li .dropdown-contenu {
-				display: none;
-				position: absolute;
-				background-color: rgb(30,33,36);
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-				padding: 12px 16px;
-				z-index: 1;
-			}
-			nav ul li .dropdown:hover .dropdown-contenu {
-				display: block;
-			}
-			.contenu{
-				margin: 4%;
-			}
-			.contenu header{
-				margin-top: 5%;
-			}
-			.contenu header h1, .contenu main .experiences h1, .contenu main .competences h1, .contenu footer .contact h1{
-				margin: 2%;
-				margin-left: 0%;
-				text-transform: uppercase;
-				font-family: 'Lato', sans-serif;
-				font-size: 200%;
-				border-bottom: 1px solid black;
-			}
-			.contenu header .button{
-				background-color: black;
-  				border: none;
-				color: white;
-				padding: 15px 32px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 16px;
-				margin: 4%;
-				margin-left: 0%;
-				cursor: pointer;
-			}
-			.contenu main .competences table{
-				display: flex;
-				justify-content: space-around;
-
-			}
-			.contenu main .competences table img{
-				width: auto;
-				height: 100px;
-				margin: 10%;
-			}
-			.contenu footer .contact ul{
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-around;
-				color: white;
-				font-size: 125%;
-				list-style: none;
-			}
-			.contenu footer .contact ul li{
-				text-decoration: none;
-			}
-			a:link{
-				color: white;
-			}
-			a:hover{
-				color: black;
-			}
-			a:visited{
-				color: white;
-			}
-			.piedPage{
-				width: 100%;
-				height: auto;
-				background-color: rgb(30,33,36);
-				color: white;
-				position: fixed;
-				bottom: 0%;
-				margin: 0%;
-				text-align: center;
-
-			}
-			@media screen and (max-width: 700px){
-				.nav ul{
-					display: none;
-				}
-				.contenu footer .contact ul{
-					font-size: 190%;
-				}
-				.contenu main .competences table img{
-					height: 140px;
-				}
-				.piedPage{
-					text-size-adjust: 150%;
-				}
+			main  h1{
+                font-weight: bold;
+                vertical-align: middle;
+                text-align: center;
+                margin-top: 20%;
+            }
+            main hr{
+                width: 50%;
+                margin: 2%;
+                margin-left: 25%;
+                margin-right: 25%;
 			}
 		</style>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		<script src="loadHeaderFooter.js"></script>
 	</head>
 	<body>
-		<nav>
-			<div class="profil">
-				<img src="images/photo.jpg" alt="Photo de Nathan HEMERY">
-				<h1>HEMERY Nathan</h1>
-			</div>
-			<ul>
-				<li>Profil</li>
-				<li>Expériences</li>
-				<li>Compétences</li>
-				<li><div class="dropdown"><span>Ressources</span>
-					<div class="dropdown-contenu"><a href="Compte Rendu de Stage FAC et LABORATOIRE.pdf" target="_blank" style="text-decoration: none;">Stage 2022</a><br>
-					<a href="CV Nathan.pdf" target="_blank" style="text-decoration: none;">Mon CV</a></div>
-				</div></li>
-				<li>Contact</li>
-			</ul>
-		</nav>
-		<section class="contenu">
-			<header>
-				<h1>Profil : Qui suis-je ?</h1>
-				<p>Actuellement étudiant en deuxième et dernière année de <b>BTS SIO ( Brevet de Technicien Supérieur en Services Informatiques aux organisations )</b>, je suis spécialisé
-					en <b>Solution Logicielles et Application Métiers ( SLAM )</b>, m'octroyant la capacités de concevoir et de maintenir différents programmes informatiques, allant de la
-					création de <b>Site Web dynamique et responsive, jusqu'au développement d'un programme informatique</b>.<br>
-					De plus, je porte, en parallèle de mon activité de développeur, <b>un intérêt pour l'écriture, les jeux vidéos ( et leurs conceptions par ailleurs ) ou encore 
-					l'histoire</b>. Vous trouverez, sur ce Portfolio one-page, mes expériences au seins de plusieurs organisations, ainsi que mes compétences acquises via le BTS SIO ou mes
-					filières antécédentes.
-				</p>
-				<a href="CV Nathan.pdf" target="_blank"><input type="button" class="button" value="Mon CV à télécharger ICI !"></a>
-			</header>
-			<main>
-				<div class="experiences">
-					<h1>Mes Expériences</h1>
-					<ul>
-						<li><b>2022</b> - Création Site Équipe Sportive dans un cadre professionnel langage PHP/HTML/CSS/SQL avec Mise en place architecture MVC</li>
-						<li><b>2021</b> - Employé chez Jules & John pendant la période estivale</li>
-						<li><b>2018</b> - Stage d’observation (Général d’Optique, Ventes/commerce et mise en rayon) </li>
-						<li><b>2017</b> - Stage d’observation (Communauté de Commune de Pornic, Gestion sur plusieurs ensembles/services) </li>
-					</ul>
-				</div>
-				<div class="competences">
-					<h1>Mes Compétences</h1>
-					<table>
-						<tr>
-							<td><img src="images/html.png" alt="HTML"></td>
-							<td><img src="images/css.png" alt="CSS"></td>
-							<td><img src="images/python.png" alt="Python"></td>
-							<td><img src="images/ue.png" alt="UE4"></td>
-							<td><img src="images/mysql.png" alt="MySQL"></td>
-
-						</tr>
-						<tr>
-							<td><img src="images/javascript.png" alt="Javascript"></td>
-							<td><img src="images/csharp.png" alt="C#"></td>
-							<td><img src="images/cpp.png" alt="CPP"></td>
-							<td><img src="images/robloxStudio.png" alt="RobloxStudio"></td>
-							<td><img src="images/php.png" alt="PHP"></td>
-
-						</tr>
-					</table>
-				</div>
-			</main>
-			<footer>
-				<div class="contact">
-					<h1>Pour me contacter !</h1>
-					<ul>
-						<li><i class="uil uil-envelope"></i><a href="mailto:hnathan.pornic@gmail.com" target="_blank">Mon Email</a></li>
-						<li><i class="uil uil-phone"></i><a href="tel:+33783578958" target="_blank">Mon Telephone</a></li>
-						<li><i class="uil uil-linkedin"></i><a href="https://www.linkedin.com/in/nathan-hemery-022a6b232/" target="_blank">Mon Linkedin</a></li>
-					</ul>
-				</div>
-			</footer>
-		</section>
-		<div class="piedPage">Copyright © 2022 - HEMERY Nathan - Tous droits réservés</div>
+		<div id="header"></div>
+		<main>
+			<h1>BIENVENUE</h1>
+			<hr>
+		</main>
+		<div id="footer"></div>
 	</body>
 </html>
